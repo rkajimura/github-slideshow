@@ -1,0 +1,50 @@
+# Morning Advisor 設定ファイル
+# このファイルを config.yaml にコピーして値を設定してください
+
+# スケジュール設定
+schedule:
+  run_time: "07:00"  # 毎朝の実行時刻 (HH:MM)
+  timezone: "Asia/Tokyo"
+
+# マネーフォワード設定
+moneyforward:
+  email: "your-email@example.com"
+  password: "your-password"
+  # 取得する口座グループ (空の場合は全口座)
+  account_groups: []
+
+# Huawei Health 設定
+# https://developer.huawei.com/consumer/en/health-kit/ で取得
+huawei_health:
+  client_id: "your-client-id"
+  client_secret: "your-client-secret"
+  refresh_token: "your-refresh-token"
+
+# Anthropic Claude API 設定
+anthropic:
+  api_key: "your-anthropic-api-key"
+  model: "claude-sonnet-4-20250514"
+
+# 目標値設定
+targets:
+  # 財務目標
+  finance:
+    # 月次貯蓄目標 (円)
+    monthly_savings_target: 100000
+    # 資産残高目標 (円) - 年末時点
+    yearly_asset_target: 5000000
+    # 緊急資金の最低ライン (円)
+    emergency_fund_minimum: 1000000
+
+  # 健康目標
+  health:
+    # 1日の歩数目標
+    daily_steps: 8000
+    # 1日の睡眠時間目標 (時間)
+    daily_sleep_hours: 7.5
+    # 安静時心拍数の上限
+    resting_heart_rate_max: 75
+    # 体重目標 (kg)
+    target_weight: 70.0
+    # 週の運動回数目標
+    weekly_exercise_count: 3
